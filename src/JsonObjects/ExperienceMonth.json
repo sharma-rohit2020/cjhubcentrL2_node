@@ -1,0 +1,50 @@
+[
+    {
+        "month_id": 1,
+        "exp_month": "0 Month"
+    },
+    {
+        "month_id": 2,
+        "exp_month": "1 Month"
+    },
+    {
+        "month_id": 3,
+        "exp_month": "2 Month"
+    },
+    {
+        "month_id": 4,
+        "exp_month": "3 Month"
+    },
+    {
+        "month_id": 5,
+        "exp_month": "4 Month"
+    },
+    {
+        "month_id": 6,
+        "exp_month": "5 Month"
+    },
+    {
+        "month_id": 7,
+        "exp_month": "6 Month"
+    },
+    {
+        "month_id": 8,
+        "exp_month": "7 Month"
+    },
+    {
+        "month_id": 9,
+        "exp_month": "8 Month"
+    },
+    {
+        "month_id": 10,
+        "exp_month": "9 Month"
+    },
+    {
+        "month_id": 11,
+        "exp_month": "10 Month"
+    },
+    {
+        "month_id": 12,
+        "exp_month": "11 Month"
+    }
+]

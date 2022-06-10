@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/392e9470-725d-428b-9ce3-345bdaf98c24/resourceGroups/webmastergrp/providers/Microsoft.Web/sites/cjwebmasterapi",
+    "appService.deploySubpath": "."
+}

@@ -1,0 +1,52 @@
+const azure = require('azure-storage')
+// Development and Stagging credentials
+const STORAGE_ACCOUNT_NAME = process.env.AZURE_STORAGE_ACCOUNT_NAME //cjweb
+const ACCOUNT_ACCESS_KEY = process.env.AZURE_ACCOUNT_ACCESS_KEY //'wco9WuRCzLBO8k1UcYcmFyfI8PAec/lpe8ILIxxJYdmZ49TEtivalU9AWCeLUiZqi7qYphDfEiw41eR2X80ncw==';
+const containerName = process.env.AZURE_containerName//'cjhubcontainer'
+
+// Production credentials
+//const STORAGE_ACCOUNT_NAME = 'Cjprodstorage01';
+//const ACCOUNT_ACCESS_KEY = 'fHw5+Bi8teji4whSUvT6KsEyMPuLGSgUz3HhgCv62FneYPUf0BWhnnCAawZA8dk40qw+5+apJ2OxU14vODye7A==';
+//const containerName = 'cjcontainer'
+
+
+const blobSvc = azure.createBlobService(STORAGE_ACCOUNT_NAME, ACCOUNT_ACCESS_KEY)
+
+
+
+const image = 'data:image/png;base64,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'
+
+  exports.uploadImgToAzure=async (file_name,profile_image)=> {
+    return new Promise((resolve, reject) => {
+        let image=profile_image;
+        let filename = file_name;
+        let file_name_array=filename.split(".");
+        
+        if(file_name_array[file_name_array.length-1]=="docx"){
+            image = image.replace(/vnd.openxmlformats-officedocument.wordprocessingml./i, '');
+        }
+
+        let matchesBlobImg = image.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+        let imgType = matchesBlobImg[1]
+        let imgBuffer = new Buffer.from(matchesBlobImg[2], 'base64')
+
+        blobSvc.createBlockBlobFromText(containerName, filename, imgBuffer, {
+            contentSettings: { contentType: imgType }
+        }, (error, result, response) => {
+            if (error)
+                reject(error);
+            console.log("🚀 ~ uploadImgToAzure ~ response", response)
+            console.log("🚀 ~ uploadImgToAzure ~ result", result)
+            const fileUrl = `https://`+STORAGE_ACCOUNT_NAME+`.blob.core.windows.net/${containerName}/${filename}`;
+
+            resolve(fileUrl)
+        })
+    })
+}
+
+/* (async () => {
+    let fileUrl = await uploadImgToAzure(image)
+    console.log("🚀 ~ fileUrl", fileUrl)
+})().catch(err => {
+    console.error(err);
+}); */
