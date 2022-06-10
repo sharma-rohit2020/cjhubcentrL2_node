@@ -1,4 +1,4 @@
- const { encrypt } = require('../middleware/crypt'); 
+ const { encrypt } = require('../middleware/crypt');
 const db = require('./index');
 // userChangerPassword
 

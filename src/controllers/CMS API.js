@@ -1,4 +1,4 @@
-const db = require('../models/index') 
+const db = require('../models/index')
 var jwt = require("jsonwebtoken");
 const utils = require('../utils/index');
 const handlebars = require('handlebars');

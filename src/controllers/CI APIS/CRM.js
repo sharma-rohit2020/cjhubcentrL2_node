@@ -1,4 +1,4 @@
-const db = require('../../models/index'); 
+const db = require('../../models/index');
 const { table, count, Console } = require('console');
 var jwt = require("jsonwebtoken");
 const bcrypt = require('bcryptjs');

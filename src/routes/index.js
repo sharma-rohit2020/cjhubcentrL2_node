@@ -1,4 +1,4 @@
-const { authJwt } = require("../middleware/index.js"); 
+const { authJwt } = require("../middleware/index.js");
 const job_list = require("../controllers/job_list");
 const job_publish = require("../controllers/jobPublish");
 const master = require("../controllers/master");
